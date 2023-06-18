@@ -14,7 +14,6 @@ const SamplePreview = () => {
       window.localStorage.getItem('projectSchema') || '{}'
     );
 
-    console.log('111xxx', packages, projectSchema);
     const { componentsMap: componentsMapArray = [], componentsTree = [] } = projectSchema;
 
     const componentsMap: any = {};
@@ -43,13 +42,10 @@ const SamplePreview = () => {
 
   const { schema, components } = data;
 
-  console.log('222xxx', schema, components);
-
   if (!schema || Object.keys(components).length === 0) {
     init();
     return <>loading...</>;
   }
-  console.log('333xxx', schema);
 
   return (
     <div className="lowcode-plugin-sample-preview">
